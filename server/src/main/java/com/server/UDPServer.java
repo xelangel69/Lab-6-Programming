@@ -21,7 +21,7 @@ public final class UDPServer {
     }
 
     public Request receiveRequest() throws IOException, ClassNotFoundException {
-        byte[] buffer = new byte[4096];
+        byte[] buffer = new byte[65536];
         DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
 
         socket.receive(packet);

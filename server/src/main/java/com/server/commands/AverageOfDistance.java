@@ -22,8 +22,6 @@ public final class AverageOfDistance extends Command {
 
     @Override
     public Response execute(String primitiveArg, Route routeArg) {
-        if (routeArg == null) return new Response(RequestStatus.BAD_REQUEST, "Маршрут не передан", null);
-
         Double averageDistance = collectionManager.averageDistance();
         return new Response(RequestStatus.SUCCESS, "Среднее расстояние - " + averageDistance, null);
     }

@@ -1,0 +1,5 @@
+2026-04-22 08:20:53.204 INFO  [main] com.server.Main - Сервер запущен на порту 8080
+2026-04-22 08:20:53.206 INFO  [main] com.server.ServerApp - Сервер начал работу
+2026-04-22 08:21:10.121 INFO  [main] com.server.ServerApp - Получен запрос
+2026-04-22 08:21:10.125 INFO  [main] com.server.ServerApp - Ответ отправлен
+2026-04-22 08:21:17.970 INFO  [Thread-0] com.server.Main - Сервер завершает работу. Сохраняем коллекцию...

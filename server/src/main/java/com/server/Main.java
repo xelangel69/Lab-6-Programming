@@ -25,6 +25,15 @@ public class Main {
             String fileName = args[0];
             File file = new File(fileName);
 
+            int port = 8080;
+            if (args.length > 1) {
+                try {
+                    port = Integer.parseInt(args[1]);
+                } catch (NumberFormatException e) {
+                    logger.warn("Передан некорректный порт. Используется порт по умолчанию: {}", port);
+                }
+            }
+
             if (file.length() == 0) throw new FileIsEmptyException("Файл пустой!");
 
             FileManager fileManager = new FileManager(fileName);
@@ -61,6 +70,7 @@ public class Main {
             }));
 
             UDPServer udpServer = new UDPServer(8080);
+            logger.info("Сервер запущен на порту {}", port);
 
             ServerApp serverApp = new ServerApp(serverCommandManager, udpServer);
 

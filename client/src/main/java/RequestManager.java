@@ -16,9 +16,9 @@ public final class RequestManager {
 
     private HashSet<String> clientCommands = new HashSet<>();
 
-    public RequestManager(String host, int port, Console console) throws IOException {
+    public RequestManager(UDPClient udpClient, Console console) throws IOException {
         this.console = console;
-        this.udpClient = new UDPClient(host, port);
+        this.udpClient = udpClient;
 
         clientCommands.add("add");
         clientCommands.add("update");
@@ -49,16 +49,19 @@ public final class RequestManager {
         Response response = udpClient.receiveResponse();
 
         switch (response.getRequestStatus()) {
-            case BAD_REQUEST -> console.println("Неверный запрос");
+            case BAD_REQUEST -> console.println("Неверный запрос. " + response.getTextMessage());
             case ERROR -> console.println(response.getTextMessage());
             case SUCCESS -> {
                 if (response.getTextMessage() != null) {
                     console.println(response.getTextMessage());
                 }
-                if (response.getResult() instanceof List<?> resultList) {
-                    resultList.forEach(System.out::println);
-                } else {
-                    console.println(response.getResult());
+
+                if (response.getResult() != null) {
+                    if (response.getResult() instanceof List<?> resultList) {
+                        resultList.forEach(console::println);
+                    } else {
+                        console.println(response.getResult());
+                    }
                 }
             }
         }

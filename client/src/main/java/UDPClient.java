@@ -28,7 +28,7 @@ public final class UDPClient {
     }
 
     public Response receiveResponse() throws InterruptedException, IOException, ClassNotFoundException {
-        ByteBuffer buffer = ByteBuffer.allocate(4096);
+        ByteBuffer buffer = ByteBuffer.allocate(65536);
         int bytesRead = 0;
         int attempts = 0;
 
