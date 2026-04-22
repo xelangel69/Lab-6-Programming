@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import com.client.network.ServerUnavailableException;
 import com.client.util.InputProvider;
 import com.client.util.JLineInputProvider;
 import org.jline.reader.EndOfFileException;

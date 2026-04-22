@@ -1,6 +1,7 @@
 package com.client;
 
 import com.client.console.Console;
+import com.client.network.UDPClient;
 import org.jline.terminal.Terminal;
 import org.jline.terminal.TerminalBuilder;
 

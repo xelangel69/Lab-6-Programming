@@ -1,7 +1,7 @@
 package com.server.commands;
 
-import com.common.RequestStatus;
-import com.common.Response;
+import com.common.network.RequestStatus;
+import com.common.network.Response;
 import com.common.model.Route;
 import com.server.manager.ServerCommandManager;
 

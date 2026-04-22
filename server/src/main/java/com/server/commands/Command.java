@@ -1,6 +1,6 @@
 package com.server.commands;
 
-import com.common.Response;
+import com.common.network.Response;
 import com.common.model.Route;
 
 /**

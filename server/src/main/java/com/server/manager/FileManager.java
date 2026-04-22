@@ -5,7 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import com.common.model.Route;
-import com.common.CollectionWrapper;
+import com.common.util.CollectionWrapper;
 
 import java.io.*;
 import java.util.Collection;

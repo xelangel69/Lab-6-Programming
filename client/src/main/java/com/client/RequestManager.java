@@ -1,10 +1,12 @@
 package com.client;
 
 import com.client.asker.RouteAsker;
+import com.client.commands.ExecuteScript;
 import com.client.console.Console;
+import com.client.network.UDPClient;
 import com.client.util.InputProvider;
-import com.common.Request;
-import com.common.Response;
+import com.common.network.Request;
+import com.common.network.Response;
 import com.common.model.Route;
 
 import java.io.IOException;

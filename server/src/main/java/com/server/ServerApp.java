@@ -2,10 +2,11 @@ package com.server;
 
 import java.io.IOException;
 
+import com.server.network.UDPServer;
 import org.apache.logging.log4j.LogManager;
 
-import com.common.Request;
-import com.common.Response;
+import com.common.network.Request;
+import com.common.network.Response;
 import com.server.manager.ServerCommandManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,8 +1,8 @@
 package com.server.manager;
 
-import com.common.Request;
-import com.common.RequestStatus;
-import com.common.Response;
+import com.common.network.Request;
+import com.common.network.RequestStatus;
+import com.common.network.Response;
 import com.common.model.Route;
 import com.server.commands.Command;
 import com.common.exceptions.UnknownCommandException;
