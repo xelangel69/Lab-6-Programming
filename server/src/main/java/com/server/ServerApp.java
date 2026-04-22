@@ -35,10 +35,10 @@ public final class ServerApp {
         while (true) {
             try {
                 Request request = udpServer.receiveRequest();
-                logger.info("Получен запрос");
+                logger.info("Получен запрос от пользователя {} - {}", udpServer.getClientAddress().toString(), request.toString());
                 Response response = serverCommandManager.handleRequest(request);
                 udpServer.sentResponse(response);
-                logger.info("Ответ отправлен");
+                logger.info("Ответ отправлен пользователю {} - {}", udpServer.getClientAddress(), response.toString());
             } catch (Exception e) {
                 logger.error("Возникла ошибка");
             }

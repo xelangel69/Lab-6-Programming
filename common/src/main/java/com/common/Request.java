@@ -38,4 +38,9 @@ public final class Request implements Serializable {
     public void setObjArg(Route routeArg) {
         this.routeArg = routeArg;
     }
+
+    @Override
+    public String toString() {
+        return "{" + commandName + "}" + "{" + stringArg + "}" + "{" + routeArg + "}";
+    }
 }

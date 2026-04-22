@@ -23,11 +23,13 @@ public final class AddIfMax extends Command {
     @Override
     public Response execute(String primitiveArg, Route routeArg) {
         if (routeArg.compareTo(collectionManager.maxElement()) > 0){
-            collectionManager.inputElement(routeArg);
+            routeArg.setId(Route.generateId());
+            routeArg.setCreationDate(java.time.ZonedDateTime.now());
 
+            collectionManager.inputElement(routeArg);
             return new Response(RequestStatus.SUCCESS, "Маршрут добавлен в коллекцию", null);
         } else {
-            return new Response(RequestStatus.ERROR, "Маршрут не был добавлен, т.к. объект меньше максимального", null);
+            return new Response(RequestStatus.ERROR, "Маршрут не добавлен, т.к. объект меньше максимального", null);
         }
     }
 }

@@ -36,4 +36,17 @@ public final class Response implements Serializable {
     public void setResult(Object result) {
         this.result = result;
     }
+
+    @Override
+    public String toString() {
+        String resultStr = (result != null) ? result.toString().trim().replace("\n", " ") : "null";
+
+        int limit = 50;
+
+        if (resultStr.length() > limit) {
+            resultStr = resultStr.substring(0, limit) + "...";
+        }
+
+        return "{" + requestStatus + "}" + "{" + textMessage + "}" + "{" + resultStr + "}";
+    }
 }

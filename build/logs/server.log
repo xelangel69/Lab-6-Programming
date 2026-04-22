@@ -1,0 +1,30 @@
+2026-04-22 10:34:45.041 INFO  [main] com.server.Main - Сервер запущен на порту 8080
+2026-04-22 10:34:45.042 INFO  [main] com.server.ServerApp - Сервер начал работу
+2026-04-22 10:35:18.509 INFO  [main] com.server.ServerApp - Получен запрос
+2026-04-22 10:35:18.513 INFO  [main] com.server.ServerApp - Ответ отправлен
+2026-04-22 10:35:31.826 INFO  [main] com.server.ServerApp - Получен запрос
+2026-04-22 10:35:31.829 INFO  [main] com.server.ServerApp - Ответ отправлен
+2026-04-22 10:35:41.238 INFO  [main] com.server.ServerApp - Получен запрос
+2026-04-22 10:35:41.241 INFO  [main] com.server.ServerApp - Ответ отправлен
+2026-04-22 10:36:02.199 INFO  [main] com.server.ServerApp - Получен запрос
+2026-04-22 10:36:02.206 INFO  [main] com.server.ServerApp - Ответ отправлен
+2026-04-22 10:36:26.962 INFO  [Thread-0] com.server.Main - Сервер завершает работу. Сохраняем коллекцию...
+2026-04-22 11:05:36.662 INFO  [main] com.server.Main - Сервер запущен на порту 8080
+2026-04-22 11:05:36.663 INFO  [main] com.server.ServerApp - Сервер начал работу
+2026-04-22 11:05:41.909 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:05:41.912 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:06:16.163 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:06:16.165 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:06:24.748 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:06:24.752 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:06:46.963 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:06:46.965 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:07:15.696 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:07:15.700 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:07:29.985 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:07:29.986 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:07:42.288 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:07:42.295 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:07:56.845 INFO  [main] com.server.ServerApp - Получен запрос от пользователя /127.0.0.1
+2026-04-22 11:07:56.849 INFO  [main] com.server.ServerApp - Ответ отправлен пользователю /127.0.0.1
+2026-04-22 11:11:30.804 INFO  [Thread-0] com.server.Main - Сервер завершает работу. Сохраняем коллекцию...

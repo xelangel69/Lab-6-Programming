@@ -33,7 +33,7 @@ public final class ServerCommandManager {
         Command command = commands.get(commandName);
 
         try {
-            if (command == null) return new Response(RequestStatus.BAD_REQUEST, "Неизвестная команда" + commandName, null);
+            if (command == null) return new Response(RequestStatus.ERROR, "Неизвестная команда " + commandName, null);
 
             Response response = command.execute(argument, route);
             commandList.addLast(commandName);

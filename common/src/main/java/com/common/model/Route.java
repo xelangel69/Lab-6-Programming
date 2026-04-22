@@ -128,6 +128,18 @@ public final class Route implements Comparable<Route>, Serializable {
         return distance;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setCreationDate(java.time.ZonedDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public static long generateId() {
+        return idCounter++;
+    }
+
     @Override
     public String toString() {
         return "ID маршрута - " + id

@@ -22,7 +22,10 @@ public final class AddElement extends Command {
 
     @Override
     public Response execute(String primitiveArg, Route routeArg) {
-        if (routeArg == null) return new Response(RequestStatus.BAD_REQUEST, "Маршрут не передан", null);
+        if (routeArg == null) return new Response(RequestStatus.ERROR, "Маршрут не передан", null);
+
+        routeArg.setId(Route.generateId());
+        routeArg.setCreationDate(java.time.ZonedDateTime.now());
 
         collectionManager.inputElement(routeArg);
         return new Response(RequestStatus.SUCCESS, "Маршрут успешно добавлен в коллекцию!", null);

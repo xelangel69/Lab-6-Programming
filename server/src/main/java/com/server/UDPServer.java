@@ -12,7 +12,7 @@ import java.net.InetAddress;
 import java.net.SocketException;
 
 public final class UDPServer {
-    private DatagramSocket socket;
+    private final DatagramSocket socket;
     private InetAddress clientAddress;
     private int clientPort;
 
@@ -38,5 +38,13 @@ public final class UDPServer {
         DatagramPacket packet = new DatagramPacket(sentData, sentData.length, clientAddress, clientPort);
 
         socket.send(packet);
+    }
+
+    public InetAddress getClientAddress() {
+        return clientAddress;
+    }
+
+    public int getClientPort() {
+        return clientPort;
     }
 }

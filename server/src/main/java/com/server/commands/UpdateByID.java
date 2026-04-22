@@ -32,9 +32,9 @@ public final class UpdateByID extends Command {
     @Override
     public Response execute(String primitiveArg, Route routeArg) {
         try {
-            if (primitiveArg.isEmpty()) return new Response(RequestStatus.BAD_REQUEST, "ID не был введён", null);
+            if (primitiveArg.isEmpty()) return new Response(RequestStatus.ERROR, "ID не был введён", null);
 
-            if (routeArg == null) return new Response(RequestStatus.BAD_REQUEST, "Маршрут не передан", null);
+            if (routeArg == null) return new Response(RequestStatus.ERROR, "Маршрут не передан", null);
 
             long id = Long.parseLong(primitiveArg);
 

@@ -59,15 +59,30 @@ public class Main {
             serverCommandManager.registerCommand("filter_contains_name", new FilterContainsName(collectionManager));
             serverCommandManager.registerCommand("print_descending", new PrintDescending(collectionManager));
 
-            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                logger.info("Сервер завершает работу. Сохраняем коллекцию...");
+            Runnable saveTask = () -> {
+                logger.info("Сохранение коллекции в файл...");
                 try {
-                    fileManager.saveCollection((collectionManager.getRoutes()));
-                    logger.info("Коллекция успешно сохранена.");
+                    fileManager.saveCollection(collectionManager.getRoutes());
+                    logger.info("Коллекция успешно сохранена!");
                 } catch (IOException e) {
-                    logger.error("Не удалось сохранить коллекцию при завершении!", e);
+                    logger.error("Не удалось сохранить коллекцию: {}", e.getMessage());
                 }
-            }));
+            };
+
+            Runtime.getRuntime().addShutdownHook(new Thread(saveTask));
+
+            Thread consoleThread = new Thread(() -> {
+                java.util.Scanner scanner = new java.util.Scanner(System.in);
+                while (scanner.hasNextLine()) {
+                    if (scanner.nextLine().trim().equalsIgnoreCase("save")) {
+                        saveTask.run();
+                    } else {
+                        logger.warn("Неизвестная серверная команда. Доступна только 'save'.");
+                    }
+                }
+            });
+            consoleThread.setDaemon(true);
+            consoleThread.start();
 
             UDPServer udpServer = new UDPServer(8080);
             logger.info("Сервер запущен на порту {}", port);

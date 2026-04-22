@@ -24,6 +24,6 @@ public final class Help extends Command {
             helpText.append(String.format("%-45s%-1s%n", command.getName(), command.getDescription()));
         });
 
-        return new Response(RequestStatus.SUCCESS, helpText.toString().trim(), null);
+        return new Response(RequestStatus.SUCCESS, null, helpText.toString().trim());
     }
 }
